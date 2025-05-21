@@ -1,6 +1,24 @@
 ---
-# Only the top of this file needs front matter for Jekyll to process it:
 ---
+
 @import "chromo_variables";
 @import "chromo_mixins";
 @import "chromo_components";
+
+// Ensure page flex layout for sticky footer
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// Main content grows to push footer down
+.main-content {
+  flex: 1 0 auto;
+}
+
+// Footer sticks to bottom
+.footer {
+  margin-top: auto;
+}

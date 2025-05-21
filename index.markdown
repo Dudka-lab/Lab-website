@@ -1,72 +1,118 @@
 ---
 layout: default
-title: Evolution of chromosome segregation
+title: Evolution of Chromosome Segregation
 ---
 
-<!-- Link to compiled SCSS -->
+<!-- External CSS & JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => AOS.init({ once: true }));
+</script>
 
-<!-- Hero with DNA/chromosome background -->
-<section
-  class="hero is-medium is-dark"
-  style="background-image: url('/assets/images/chromosome-bg.jpg');
-         background-size: cover;
-         background-position: center;"
->
-  <div class="hero-body has-text-centered">
-    <h1 class="title has-text-white">Evolution of Chromosome Segregation</h1>
-    <h2 class="subtitle has-text-white">Dudka Lab</h2>
-  </div>
-</section>
+<style>
+  :root {
+    --sky-blue: #87CEEB;
+    --magenta: #FF00FF;
+  }
+  body {
+    background: url('{{ '/assets/images/Dudka-lab-website-cover.png' | relative_url }}') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .overlay-section {
+    background-color: rgba(255,255,255,0.85);
+    padding: 4rem 2rem;
+    margin: 2rem auto;
+    border-radius: 6px;
+    max-width: 960px;
+  }
+  .fancy-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--magenta);
+  }
+  .fancy-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  .button.is-link.is-inverted {
+    background-color: var(--magenta);
+    border-color: var(--sky-blue);
+    color: white;
+  }
+  .button.is-link.is-inverted:hover {
+    background-color: var(--sky-blue);
+    border-color: var(--magenta);
+    color: white;
+  }
+</style>
 
-<!-- Card grid for main sections -->
-<section class="section">
-  <div class="container">
-    <div class="columns is-multiline is-variable is-4">
-      <!-- Research Card -->
-      <div class="column is-4">
-        <a href="{{ site.baseurl }}/research/">
-          <div class="card has-text-centered">
-            <div class="card-content">
-              <span class="icon is-large">
-                <i class="fas fa-flask fa-2x"></i>
-              </span>
-              <p class="title is-4">Research</p>
-              <p>Evolutionary mechanisms of chromosome segregation.</p>
+<div class="main-content">
+  <!-- Hero overlay -->
+  <section class="section overlay-section">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-dark animate__animated animate__fadeInDown">
+        Evolution of Chromosome Segregation
+      </h1>
+      <h2 class="subtitle has-text-dark animate__animated animate__fadeInUp animate__delay-1s">
+        Dudka Lab @ UPenn
+      </h2>
+      <a href="#main-sections"
+         class="button is-large is-link is-inverted animate__animated animate__bounce animate__delay-2s mt-5">
+        Explore ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- Animated card grid -->
+  <section id="main-sections" class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <!-- Research -->
+        <div class="column is-one-third" data-aos="fade-up" data-aos-delay="100">
+          <a href="{{ site.baseurl }}/research/">
+            <div class="card fancy-card">
+              <div class="card-content has-text-centered">
+                <span class="icon is-large"><i class="fas fa-flask fa-2x"></i></span>
+                <p class="title is-4">Research</p>
+                <p>Evolutionary mechanisms of chromosome segregation.</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Publications Card -->
-      <div class="column is-4">
-        <a href="{{ site.baseurl }}/publications/">
-          <div class="card has-text-centered">
-            <div class="card-content">
-              <span class="icon is-large">
-                <i class="fas fa-book fa-2x"></i>
-              </span>
-              <p class="title is-4">Publications</p>
-              <p>Browse our latest papers and preprints.</p>
+          </a>
+        </div>
+        <!-- Publications -->
+        <div class="column is-one-third" data-aos="fade-up" data-aos-delay="200">
+          <a href="{{ site.baseurl }}/publications/">
+            <div class="card fancy-card">
+              <div class="card-content has-text-centered">
+                <span class="icon is-large"><i class="fas fa-book fa-2x"></i></span>
+                <p class="title is-4">Publications</p>
+                <p>Browse our latest papers and preprints.</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- CV Card -->
-      <div class="column is-4">
-        <a href="{{ site.baseurl }}/cv/">
-          <div class="card has-text-centered">
-            <div class="card-content">
-              <span class="icon is-large">
-                <i class="fas fa-id-card fa-2x"></i>
-              </span>
-              <p class="title is-4">CV</p>
-              <p>Download Damian Dudka’s curriculum vitae.</p>
+          </a>
+        </div>
+        <!-- CV -->
+        <div class="column is-one-third" data-aos="fade-up" data-aos-delay="300">
+          <a href="{{ site.baseurl }}/cv/">
+            <div class="card fancy-card">
+              <div class="card-content has-text-centered">
+                <span class="icon is-large"><i class="fas fa-id-card fa-2x"></i></span>
+                <p class="title is-4">CV</p>
+                <p>Download Damian Dudka’s curriculum vitae.</p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>&copy; 2025 Dudka Lab. All rights reserved.</p>
   </div>
-</section>
+</footer>
