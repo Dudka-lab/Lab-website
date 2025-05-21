@@ -1,0 +1,7 @@
+@mixin center-flex { display: flex; justify-content: center; align-items: center; }
+@mixin card($bg,$radius: .5rem) {
+  background: $bg;
+  border-radius: $radius;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  padding: $base-spacing*1.5;
+}
