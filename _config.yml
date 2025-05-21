@@ -22,7 +22,7 @@ title: Dudka lab
 email: dudka@sas.upenn.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Evolutionary of chromosome segregation lab
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/Lab-website" # the subpath of your site, e.g. /blog
 domain: Dudka-lab.github.io
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: damian_dudka
